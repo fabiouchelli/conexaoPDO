@@ -13,10 +13,12 @@ try{
 
 	//$sql = "INSERT INTO usuarios (nome, email, senha) VALUES ('$nome', '$email', '$senha')"; 
 	//$sql = "INSERT INTO usuarios SET nome = '$nome', email = '$email', senha = '$senha'"; 
-	$sql = "UPDATE usuarios SET email = 'abc@hotmail.com' WHERE email = 'fulano@hotmail.com'";
-	$sql = $pdo->query($sql);
+	/*$sql = "UPDATE usuarios SET email = 'abc@hotmail.com' WHERE email = 'fulano@hotmail.com'";
+	$sql = $pdo->query($sql);*/
+	$sql = "DELETE FROM usuarios WHERE id = 10";
+	$pdo->query($sql);
 
-	echo "Email alterado com sucesso!";
+	echo "Usuário deletado com sucesso!";
 	//echo "Usuário inserido: ".$pdo->lastInsertId();
 
 }catch(PDOException $e){
